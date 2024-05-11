@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url(./variables.css);
+html {
+  background-color: var(--paloRosa);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+a {
+  color: var(--paloRosa);
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+h2 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 40px 8px 10px 8px;
+}
+
+.contenedor {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+}
+
+.contenido {
+  border-radius: 10px;
+  background: var(--blanco);
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  box-shadow: 0 30px 60px 0 var(--sombraNegra);
+  text-align: center;
+}
+
+#cantenedorAbajo {
+  background-color: var(--grisCenizo);
+  border-top: 1px solid var(--paloRosa);
+  padding: 25px;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+}
+
+.titulo {
+  color: var(--negro);
+  border-bottom: 2px solid var(--paloRosa);
+}
+
+button, input[type=submit] {
+  background-color: var(--paloRosa);
+  border: none;
+  color: var(--blanco);
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  box-shadow: 0 10px 30px 0 var(--sombraRosa);
+  border-radius: 5px;
+  margin: 5px 20px 40px 20px;
+}
+
+button, input[type=submit]:hover {
+  background-color: var(--paloRosa);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number], input[type=password] {
+  background-color: var(--grisCenizo);
+  border: none;
+  color: var(--negro);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid var(--grisCenizo);
+  transition: all 0.5s ease-in-out;
+  border-radius: 5px;
+}
+
+input[type=number]:focus, input[type=password]:focus {
+  background-color: var(--blanco);
+  border-bottom: 2px solid var(--paloRosa);
+}
+
+.linea:after {
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: var(--paloRosa);
+  content: "";
+  transition: width 0.2s;
+}
+
+.linea:hover {
+  color: var(--negro);
+}
+
+.linea:hover:after {
+  width: 100%;
+}
+
+*:focus {
+  outline: none;
+}
+
+.icon {
+  width: 10%;
+}
+
+* {
+  box-sizing: border-box;
+}
