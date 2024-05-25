@@ -5,7 +5,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
     $nombre = $_SESSION['nombre1'];
     $apellido = $_SESSION['apellido1'];
 } else {
-    header("Location: login.php");
+    header("Location: loginView.php");
     exit;
 }
 ?>
