@@ -14,7 +14,7 @@
   font-family: "Poppins", sans-serif;
 }
 body{
-    margin: 0 0 100px 0;
+    margin: 0 0 0 0;
     padding: 0;
 }
 
@@ -83,4 +83,31 @@ body{
     width: 50px;
     height: 50px;
     margin-right: 10px;
+}
+/*------------------------*/
+.pie{
+    background-color: var(--colorPrimario);
+    margin-top: 100px;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pie1{
+    margin: 50px;
+}
+.pie2{
+    margin-right: 300px;
+}
+.pie1 p:nth-child(1){
+    color: var(--colorTexto);
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.pie1 p:nth-child(2),
+.pie2 p{
+    color: var(--colorTexto);
+    font-size: 16px;
+    letter-spacing: 2px;
 }
