@@ -18,12 +18,19 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
 <title>Home</title>
 </head>
 <body>
+    <div class="menu">
+        <a href="index.php">Inicio</a>
+        <a href="about.php">Acerca de</a>
+        <a href="services.php">Servicios</a>
+        <a href="contact.php">Contacto</a>
+    </div>
     <div class="contenedor">
         <div class="contenido">
             <h1>Bienvenido a la página de inicio</h1>
             <h2><?php echo "Bienvenido, $nombre $apellido"; ?></h2>
             <form action="close.php" method="POST">
                 <button type="submit" name="logout">Cerrar Sesión</button>
+                <button type="submit" name="hola">Registrar empleado</button>
             </form>
         </div>
     </div>

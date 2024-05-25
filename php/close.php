@@ -10,3 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['logout'])) {
     header("Location: loginView.php");
     exit;
 }
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['hola'])) {
+    header("Location: registerView.php");
+    exit;
+}

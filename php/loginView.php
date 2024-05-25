@@ -16,20 +16,20 @@
 </head>
 <body>
     <div class="contenedor">
-        <div class="contenido">
-          <h2 class="titulo">Inicio de Sesión</h2>      
-          <div class="desvanecer uno">
-            <img src="../img/icon.png" class="icon" alt="User Icon"/>
-          </div>
-          <form action="login.php" method="POST">
-            <input type="number" id="login" class="desvanecer dos" name="numeroidentificacione" placeholder="Usuario" required> 
-            <input type="password" id="password" class="desvanecer tres" name="contrasena" placeholder="Contraseña" required> 
-            <input type="submit" class="desvanecer cuatro" name="login" value="Iniciar Sesión"> 
-          </form>
-          <div id="cantenedorAbajo">
-            <a class="linea" href="#">¿Olvidaste tu Contraseña?</a>
-          </div>
+      <div class="contenido">
+        <h2 class="titulo">Inicio de Sesión</h2>
+        <div>
+          <img src="../img/icon.png" class="icon" alt="User Icon"/>
+        </div>
+        <form action="login.php" method="POST">
+          <input type="number" id="login" class="desvanecer dos" name="numeroidentificacione" placeholder="Usuario" required> 
+          <input type="password" id="password" class="desvanecer tres" name="contrasena" placeholder="Contraseña" required> 
+          <input type="submit" class="desvanecer cuatro" name="login" value="Iniciar Sesión"> 
+        </form>
+        <div class="cantenedorAbajo">
+          <a class="linea" href="#">¿Olvidaste tu Contraseña?</a>
         </div>
       </div>
-</body>
+    </div>
+  </body>
 </html>
