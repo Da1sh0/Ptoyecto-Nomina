@@ -1,20 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
-
-:root {
-    --colorPrimario: #4A90E2;    /* Azul Primario */
-    --colorSecundario: #50E3C2;  /* Verde Secundario */
-    --colorAcento: #F5A623;      /* Naranja de Acento */
-    --colorFondo: #F4F4F4;       /* Gris Claro de Fondo */
-    --colorTexto: #333333;       /* Negro Suave para Texto */
-    --colorEncabezado: #4A4A4A;  /* Gris Oscuro para Encabezados */
-    --colorBorde: #E0E0E0;       /* Gris Claro para Bordes */
-}
+@import url(./variables.css);
 
 *{
   font-family: "Poppins", sans-serif;
 }
 body{
-    margin: 0 0 0 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -38,12 +29,18 @@ body{
     color: var(--colorEncabezado);
     margin: 0 25px 0 25px;
 }
+.encabezados a:hover{
+    color: var(--colorAcento);
+}
 .boton{
     text-decoration: none;
     color: white;
-    background-color: #4A90E2;
+    background-color: var(--colorPrimario);
     padding: 10px;
     box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+}
+.boton:hover{
+    background-color: var(--colorAcento);
 }
 /*------------------------*/
 .contenedor{

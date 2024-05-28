@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 @import url(./variables.css);
+
 html {
   background-color: var(--paloRosa);
   margin: 0;

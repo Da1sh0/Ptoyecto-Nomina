@@ -1,0 +1,9 @@
+:root {
+  --colorPrimario: #4A90E2;    /* Azul Primario */
+  --colorSecundario: #50E3C2;  /* Verde Secundario */
+  --colorAcento: #F5A623;      /* Naranja de Acento */
+  --colorFondo: #F4F4F4;       /* Gris Claro de Fondo */
+  --colorTexto: #333333;       /* Negro Suave para Texto */
+  --colorEncabezado: #4A4A4A;  /* Gris Oscuro para Encabezados */
+  --colorBorde: #E0E0E0;       /* Gris Claro para Bordes */
+}

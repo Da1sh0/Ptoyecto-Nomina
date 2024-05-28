@@ -1,6 +1,10 @@
 <?php
 session_start();
 include './conexion.php';
+  // Verificar si el usuario ya tiene una sesión iniciada
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+    header("Location: homeView.php"); 
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
     $numeroidentificacione = mysqli_real_escape_string($conn, $_POST['numeroidentificacione']);
