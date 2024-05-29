@@ -1,21 +1,14 @@
 <?php
-session_start();
-
-if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-    $nombre = $_SESSION['nombre1'];
-    $apellido = $_SESSION['apellido1'];
-} else {
-    header("Location: loginView.php");
-    exit;
-}
+include './../models/home.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../css/style.css">
-<title>Home</title>
+<link rel="stylesheet" href="./../../public/css/style.css">
+<link rel="shortcut icon" href="./../../public/img/logo2.png" type="image/x-icon">
+<title>Pay Master</title>
 </head>
 <body>
     <div class="menu">
@@ -28,7 +21,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
         <div class="contenido">
             <h1>Bienvenido a la página de inicio</h1>
             <h2><?php echo "Bienvenido, $nombre $apellido"; ?></h2>
-            <form action="close.php" method="POST">
+            <form action="./../models/home.php" method="POST">
                 <button type="submit" name="logout">Cerrar Sesión</button>
                 <button type="submit" name="hola">Registrar empleado</button>
             </form>

@@ -1,25 +1,28 @@
-<?php
-include './login.php';
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../img/logo2.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/login_style.css">
+    <link rel="shortcut icon" href="./../../public/img/logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./../../public/css/login_style.css">
     <title>Iniciar Sesión</title>
-    <script src="../js/alert.js"></script>
+    <script src="./../../public/js/alert.js"></script>
 </head>
 <body>
   <div class="contenedeor">
     <div class="logo">
-      <img src="../img/logo2.png" alt="PayMaster">
+      <img src="./../../public/img/logo2.png" alt="PayMaster">
       <p>PayMaster</p>
     </div>
 
     <div class="login">
-      <form action="login.php" method="POST">
+      <form action="./../controllers/loginController.php" method="POST">
+
+        <?php if (!empty($error_message)): ?>
+        <div class="error-message">
+            <p><?php echo htmlspecialchars($error_message); ?></p>
+        </div>
+        <?php endif; ?>
 
         <div>
           <p>Numero de Identificacion</p>
@@ -44,8 +47,7 @@ include './login.php';
           <input type="submit" class="boton" name="login" value="Iniciar Sesión"> 
         </div>
       </form>
-        
     </div>
   </div>
-  </body>
+</body>
 </html>

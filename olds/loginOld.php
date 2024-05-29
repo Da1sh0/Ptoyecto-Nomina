@@ -1,9 +1,9 @@
 <?php
 session_start();
-include './conexion.php';
-  // Verificar si el usuario ya tiene una sesión iniciada
+include './../../config/conexion.php';
+ 
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-    header("Location: homeView.php"); 
+    header("Location: ./../views/homeView.php"); 
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
         $intentos_fallidos = $row['intentos_fallidos'];
         if ($intentos_fallidos >= 3) {
             $error_message = "El usuario está bloqueado. Por favor, contacta al administrador.";
-            header("Location: loginView.php?error_message=" . urlencode($error_message));
+            header("Location: ../views/loginView.php?error_message=" . urlencode($error_message));
             exit;
         }
         if (password_verify($contrasena, $row['contrasena'])) {
@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
             $_SESSION['nombre1'] = $row['nombre1'];
             $_SESSION['apellido1'] = $row['apellido1'];
             $_SESSION['idRol'] = $row['idRol'];
-            header("Location: homeView.php");
+            header("Location: ../views/homeView.php");
             exit;
         } else {
             $intentos_fallidos++;
@@ -45,17 +45,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
             $stmt_update_attempts->execute();
             if ($intentos_fallidos >= 3) {
                 $error_message = "Has excedido el número máximo de intentos. El usuario ha sido bloqueado.";
-                header("Location: loginView.php?error_message=" . urlencode($error_message));
+                header("Location: ../views/loginView.php?error_message=" . urlencode($error_message));
                 exit;
             } else {
                 $error_message = "Usuario o contraseña incorrectos. Intento #" . $intentos_fallidos;
-                header("Location: loginView.php?error_message=" . urlencode($error_message));
+                header("Location: ../views/loginView.php?error_message=" . urlencode($error_message));
                 exit;
             }
         }
     } else {
         $error_message = "Usuario o contraseña incorrectos.";
-        header("Location: loginView.php?error_message=" . urlencode($error_message));
+        header("Location: ../views/loginView.php?error_message=" . urlencode($error_message));
         exit;
     }
 }
