@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+    header("Location: ./homeView.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,12 +24,6 @@
 
     <div class="login">
       <form action="./../controllers/loginController.php" method="POST">
-
-        <?php if (!empty($error_message)): ?>
-        <div class="error-message">
-            <p><?php echo htmlspecialchars($error_message); ?></p>
-        </div>
-        <?php endif; ?>
 
         <div>
           <p>Numero de Identificacion</p>

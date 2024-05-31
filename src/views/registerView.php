@@ -3,7 +3,7 @@
   // Verificar si el usuario ya tiene una sesión iniciada
   if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {;
     } else {
-        header("Location: loginView.php");
+        header("Location: ./loginView.php");
         exit;
     }
 ?>
